@@ -2,7 +2,7 @@
 title: "Urban and Suburban Population Density Changes between 2010-2018 in Massachusetts, USA"
 author: "Einav Grinberg"
 date: "February 26, 2020"
-output: rmarkdown::github_document
+output: html
 ---
 
 ```{r setup, include=FALSE}
