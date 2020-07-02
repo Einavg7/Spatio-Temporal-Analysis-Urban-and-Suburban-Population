@@ -1,11 +1,11 @@
----
-title: "Urban and Suburban Population Density Changes between 2010-2018 in Massachusetts, USA"
-author: "Einav Grinberg"
-date: "February 26, 2020"
+
+# Title: "Urban and Suburban Population Density Changes between 2010-2018 in Massachusetts, USA"
+# Author: "Einav Grinberg"
+# Date: "February 26, 2020"
 output: 
   html_document: 
     keep_md: true
----
+
 
 
 
@@ -24,7 +24,7 @@ This study's objective is to further analyze population density changes in Massa
 
 Firstly, population change in all of Massachusetts was temporaly analyzed between 2010-2018. Next the population was divided by settlement type; city, town and town-city. 
 The types are defined by Massachusetts Secretary of State Office, town-city is a town with city form of government.
-The population growth rate between these years was calculated using $\frac{pop_t-pop_{t-1}}{pop_{t-1}}*{100}$ for each settlement type. After adding the spatial data, population density was calculated for each settlement using $\frac{pop_t}{area}$ in $\frac{1}{km^2}$.
+The population growth rate between these years was calculated using $ \frac{pop_t-pop_{t-1}}{pop_{t-1}}*{100} $ for each settlement type. After adding the spatial data, population density was calculated for each settlement using $\frac{pop_t}{area}$ in $\frac{1}{km^2}$.
 The density changes have been visualized and temporaly analyzed between 2010-2018 for all of Massachusetts and for settlement types. To test for spatial autocorrelation between all the settlements in Massachusetts two types of neighbours and spatial weights have been used. The first set of neighbours was created using queen contiguous neighbours. This method is calculated by each polygon centroid checking its distance to at least one other polygon centroid. 
 The second set of neighbours were calculated using ${k}$-nearest neighbours using the equation ${k}=\sqrt{n}$ where ${n}$ is the number of observations, as a threshold value. Next, the spatial weights were calculated using binary style that gives a weight of unity to each neighbour relationship, and upweights units with no boundaries on the edge of the study area. The spatial weights were calculated without Massachusetts islands using the zero.policy argument. After creating two sets of spatial weight based on the different neighbour calculations, Moran's I test was calculated for every year between all Massachusetts settlements. For further analysis, the five most populated cities and there neighbours were selected. First, a temporal analysis of density population changes was examined. As mentioned in the paper Spatial Regression Models for Demographic Analysis by Chi & Zhu (2007) the distance and contiguous based spatial weight matrix tend to be less compitable regarding census units, because they usually make too many neighbors in urban areas and too few neighbors in rural areas. Therefore, ${k}$-nearest neighbours based spatial weights were used for the main cities and their neighbours, the spatial weights were calculated using the equation ${k}=\sqrt{n}$ as a threshold value. With the spatial weights created, Moran's I test was computed to analyze spatial autocorrelation between the main cities and their neighbours population density for every year from 2010 to 2018. 
 
