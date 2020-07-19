@@ -13,3 +13,5 @@ This study uses lattice data for spatio-temporal analysis.
 * The population data was downloaded as a csv file from UMass State Data Center: http://www.donahue.umassp.edu/business-groups/economic-public-policy-research/massachusetts-population-estimates-program.
 
 * The spatial data was downloadad as a shapefile from the Massachusetts Government Data Portal: https://docs.digital.mass.gov/dataset/massgis-data-county-boundaries.
+
+*License MIT*
